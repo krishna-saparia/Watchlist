@@ -1,9 +1,12 @@
 .spacebar {
   flex: 1 1 auto;
-  justify-items: end;
-  margin: 30px auto auto auto;
 }
 
-mat-form-field {
-  margin: 30px auto 30px auto;
+/*mat-form-field {*/
+/*  margin: 30px auto 30px auto;*/
+/*}*/
+
+.pad {
+  padding-top: 1.5%;
+  padding-bottom: 0.5%;
 }

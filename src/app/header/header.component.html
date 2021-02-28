@@ -1,14 +1,5 @@
-<mat-toolbar color="primary" >
+<mat-toolbar color="primary"  class="pad">
   <span>Watchlist</span>
   <span class="spacebar"></span>
-  <mat-form-field>
-    <mat-label>
-      Search
-    </mat-label>
-    <input matInput type = "text" [(ngModel)]="query">
-    <button mat-button *ngIf="query" matSuffix mat-icon-button aria-label="clear" (click)="query=''">
-      <mat-icon> Close </mat-icon>
-    </button>
-  </mat-form-field>
+  <app-search></app-search>
 </mat-toolbar>
-<h1>{{query}}</h1>
