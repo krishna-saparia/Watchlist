@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {FormsModule} from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
+    MatCardModule,
     FormsModule
   ],
   providers: [],
