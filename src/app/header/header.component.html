@@ -1,1 +1,14 @@
-<p>header works!</p>
+<mat-toolbar color="primary" >
+  <span>Watchlist</span>
+  <span class="spacebar"></span>
+  <mat-form-field>
+    <mat-label>
+      Search
+    </mat-label>
+    <input matInput type = "text" [(ngModel)]="query">
+    <button mat-button *ngIf="query" matSuffix mat-icon-button aria-label="clear" (click)="query=''">
+      <mat-icon> Close </mat-icon>
+    </button>
+  </mat-form-field>
+</mat-toolbar>
+<h1>{{query}}</h1>
