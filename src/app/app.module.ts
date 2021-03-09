@@ -9,6 +9,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ShowInfoComponent } from './show-info/show-info.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
+
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
@@ -16,6 +17,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatInputModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

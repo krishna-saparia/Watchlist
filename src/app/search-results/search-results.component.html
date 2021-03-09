@@ -1,1 +1,5 @@
-<p>search-results works!</p>
+<div class="container">
+  <div class="item" *ngFor="let show of Shows">
+    <app-show-info [show]="show"></app-show-info>
+  </div>
+</div>
