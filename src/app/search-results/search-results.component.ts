@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Show } from '../models/show.model';
 import {ShowService} from '../service/show.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-search-results',
@@ -9,14 +10,18 @@ import {ShowService} from '../service/show.service';
 })
 export class SearchResultsComponent implements OnInit {
   Shows: Array<Show>;
-  constructor(private showService: ShowService) {
-    this.showService.getShow().subscribe(
-      (s) => {
-        this.Shows = s;
-      });
+  query: string;
+  constructor(private showService: ShowService, private route: ActivatedRoute) {
+    // this.showService.getShow().subscribe(
+    //   (s) => {
+    //     this.Shows = s;
+    //   });
+    this.query = this.route.snapshot.params.query;
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe((p) => { this.query = p.query; });
+    this.showService.getShow().subscribe((s) => { this.Shows = s; });
   }
 
 }

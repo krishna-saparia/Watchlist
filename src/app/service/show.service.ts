@@ -86,4 +86,7 @@ export class ShowService {
   getEpisode(): Observable<Array<Episode>> {
     return of<Array<Episode>>(this.episodes);
   }
+  getShowId(id: string): Observable<Show> {
+    return of<Show>(this.show[0]);
+  }
 }
