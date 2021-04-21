@@ -29,7 +29,7 @@ export class ShowDetailsComponent implements OnInit {
     });
   }
   applyFilter(e: Event): void {
-    const filterValue = (event.target as HTMLInputElement).value;
+    const filterValue = (e.target as HTMLInputElement).value;
     this.episodes.filter = filterValue.trim().toLowerCase();
   }
 }
