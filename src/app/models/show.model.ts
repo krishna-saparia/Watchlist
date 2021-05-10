@@ -14,6 +14,6 @@ export class Show {
     this.genres = showInfo.genres;
     this.summary = showInfo.summary;
     this.status = showInfo.status;
-    this.image = showInfo.image;
+    this.image = (showInfo.image) ? showInfo.image.medium : null;
   }
 }

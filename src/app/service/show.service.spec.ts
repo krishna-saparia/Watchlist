@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ShowService } from './show.service';
+import { ShowService } from './tvmaze.service';
 
 describe('ShowService', () => {
   let service: ShowService;

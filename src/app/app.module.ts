@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ErrorComponent } from './error/error.component';
 import { EncryptPipe } from './controls/encypt.pipe';
 import { ShortenPipe } from './controls/shorten.pipe';
+import { HtmlstripperPipe } from './controls/htmlstripper.pipe';
 
 @NgModule({
   declarations: [
@@ -33,11 +35,14 @@ import { ShortenPipe } from './controls/shorten.pipe';
     WatchlistComponent,
     ErrorComponent,
     EncryptPipe,
-    ShortenPipe
+    ShortenPipe,
+    HtmlstripperPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatButtonModule,
