@@ -11,9 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 export class SearchResultsComponent implements OnInit {
   Shows: Array<Show>;
   query: string;
-  constructor(private route: ActivatedRoute, private tvService: TvmazeService) {
-    this.query = this.route.snapshot.params.query;
-  }
+  constructor(private route: ActivatedRoute, private tvService: TvmazeService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((p) => { this.query = p.query; });

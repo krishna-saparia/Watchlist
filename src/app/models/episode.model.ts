@@ -14,11 +14,11 @@ export class Episode {
     this.id = episodeInfo.id;
     this.name = episodeInfo.name;
     this.seasonNumber = episodeInfo.season;
-    this.episodeNumber = episodeInfo.episode;
+    this.episodeNumber = episodeInfo.number;
     this.airDate = new Date(episodeInfo.airdate);
     this.summary = episodeInfo.summary;
-    this.fullNumber = `S${(episodeInfo.season > 9) ? episodeInfo.season : '0' + episodeInfo.season }` +
-      `E${(episodeInfo.episode > 9) ? episodeInfo.episode : '0' + episodeInfo.episode }`;
+    this.fullNumber = `S${(Number(episodeInfo.season) > 9) ? episodeInfo.season : '0' + episodeInfo.season }` +
+      `E${(Number(episodeInfo.number) > 9) ? episodeInfo.number : '0' + episodeInfo.number }`;
   }
 }
 

@@ -1,6 +1,6 @@
 <h1>{{show.name}}</h1>
 <h4>Status: {{show.status | titlecase}} | Language: {{show.language | titlecase}}</h4>
-<p>{{show.summary}}</p>
+<p>{{show.summary | htmlstripper}}</p>
 
 <mat-form-field>
   <mat-label>Filter</mat-label>
@@ -26,7 +26,7 @@
 
   <ng-container matColumnDef="summary">
     <th mat-header-cell *matHeaderCellDef>Plot</th>
-    <td mat-cell *matCellDef="let episode">{{episode.summary | encrypt: 1}}</td>
+    <td mat-cell *matCellDef="let episode">{{episode.summary | htmlstripper | shorten: 250}}</td>
   </ng-container>
 
 
